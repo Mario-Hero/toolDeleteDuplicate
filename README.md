@@ -54,21 +54,21 @@ Delete videos with duplicate content but lower image quality: First determine wh
 
 Delete the same file：
 
- 1.  toolDeleteDuplicate.py：
+ 1. toolDeleteDuplicate.py：
 
     For "abcdefg.mp4 and abcdefg(1).mp4" case, which the file name of one file is included in the file name of another file, delete abcdefg(1). mp4, that is, delete the file with the longer file name. For the other cases, delete the file with the shorter file name.
 
- 2.  toolDeleteInDifferentFolder.py：
+ 2. toolDeleteInDifferentFolder.py：
 
     If the file is not in the folder that needs to be kept, delete it. If it is, delete another file. If both files are in the folder that needs to be kept, use toolDeleteDuplicate. py's method to delete. 
 
  Delete videos with duplicate content but lower image quality：
 
- 1.  toolDeleteDuplicate.py：
+ 1. toolDeleteDuplicate.py：
 
     Delete videos with smaller file sizes. 
 
- 2.  toolDeleteInDifferentFolder.py：
+ 2. toolDeleteInDifferentFolder.py：
 
     Delete videos with smaller file sizes. If the file is not in the folder that needs to be kept, delete it. If it is, delete it and move another file to the folder that needs to be kept.
 
