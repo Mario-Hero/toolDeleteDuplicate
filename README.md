@@ -4,6 +4,10 @@
 
 A Python script which can delete duplicate files, and videos with same content but lower image quality.
 
+**注意：请谨慎操作，本程序会将文件直接删除，而不是放入回收站。**
+
+**Note: Please be careful. This program will delete files immediately instead of putting them into the recycle bin.**
+
 ## 依赖 Dependency 
 
 Python 3.5+
@@ -22,11 +26,11 @@ toolDeleteInDifferentFolder.py : Drag and drop several folders into the script, 
 
 ## 原理 Principles
 
-删除相同文件：首先判断大小是否相同，然后判断哈希值是否相同。
+删除相同文件：首先判断大小是否相同，然后判断哈希值(md5)是否相同。
 
 删除内容重复但画质较差的视频：首先判断视频时长是否相同，然后用OpenCV截取视频的几帧，获取直方图相似度，大于0.99的则判为相同视频，然后删除文件大小较小的视频。
 
-Delete the same file: First determine whether the size is the same, then determine whether their hash values are the same. 
+Delete the same file: First determine whether the size is the same, then determine whether their hash values(md5) are the same. 
 
 Delete videos with duplicate content but lower image quality: First determine whether the length of video is the same, then use OpenCV to capture some frames of the video to obtain the similarity of the histogram. Videos whose similarity larger than 0.99 will be judged as the same video, and then delete the video with smaller file size.
 
